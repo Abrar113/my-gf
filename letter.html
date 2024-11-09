@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only for u</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+    <center>
+    <div class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1"></div>
+                <div class="words line2"></div>
+                <div class="words line3"></div>
+                <div class="words line4"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+                <div class="heart a4"></div>
+                <div class="heart a5"></div>
+                <div class="heart a6"></div>
+                <div class="heart a7"></div>
+                <div class="heart a8"></div>
+</div>
+        </div>
+    </div>
+    <div class="reset">
+        <button id="open">Open</button>
+        <button id="reset">Reset</button>
+    </div>
+    </center>
+<br><br> <br><br>
+
+<button class="back"><a href="index.html">go back </a></button>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script>
+        $( document ).ready(function() {
+
+var envelope = $('#envelope');
+var btn_open = $("#open");
+var btn_reset = $("#reset");
+
+envelope.click( function() {
+    open();
+});
+btn_open.click( function() {
+    open();
+});
+btn_reset.click( function() {
+    close();
+});
+
+function open() {
+    envelope.addClass("open")
+       .removeClass("close");
+}
+function close() {
+    envelope.addClass("close")
+       .removeClass("open");
+}
+
+});
+    </script>
+</body>
+</html>
